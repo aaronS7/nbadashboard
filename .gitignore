@@ -70,4 +70,4 @@ fabric.properties
 # End of https://www.gitignore.io/api/pycharm
 
 venv/*
-./idea/vcs.xml
+.idea/vcs.xml
