@@ -81,8 +81,6 @@ def teamStats_callback(season, option):
         "layout": go.Layout(title="NBA Seasons compared to" + " " + option)
     }
 
-
-
 # Callback for player dropdown (first)
 @app.callback(Output("nbaPlayerStats", "options"),
               [Input("nbaDropdown", "value")])
@@ -105,7 +103,6 @@ def dropdownStat_callback_value(season):
 def playerStats_callback(season, option):
     dfList = {}
     for fileName in season:
-        # print("player For loop: " + fileName)
         df = pd.read_csv("regularSeason/csv/" + fileName)
         dfList[fileName.replace(".csv", "")] = df.sort_values(option, ascending=False)
     return {
@@ -130,7 +127,6 @@ def mvpdropdown_callback_options(season):
 @app.callback(Output("mvpStats", "value"),
               [Input("mvpStats", "options")])
 def mvpdropdown_callback_value(season):
-    # print("mvpdropdown: ", season[2]['value'])
     return season[2]['value']
 
 
