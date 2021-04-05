@@ -10,4 +10,4 @@ image:
 tasks:
   - before: bash gitpodSetup.sh
     init: bash gitpodInit.sh # runs during prebuild
-    command: bash gitpodCommand.sh
+    command: bash gitpodCommand.sh && source /home/gitpod/.profile
